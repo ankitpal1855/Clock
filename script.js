@@ -11,7 +11,8 @@ setInterval(() => {
   stime = stime < 10 ? "0" + stime : stime;
   
   // Making 12 hour Format//
-  htime = (10 > htime > 12) ? "0" + (htime - 12) : htime-12;
+  htime = (htime > 10 && htime <= 12) ? htime : (htime > 12) ? htime - 12 :(htime == 0) ? "12" : htime;
+  
   
 // Defining Rotation of Clock Hands//
   hrotation = 30*htime + mtime/2;
