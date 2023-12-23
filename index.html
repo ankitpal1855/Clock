@@ -4,105 +4,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width">
-  <title>Analog Clock</title>
-
-<style>
-  @keyframes moveUpDown {
-  0% {
-    transform: translateY(0);
-  }
-  100% {
-    transform: translateY(3vh);
-  }
-  }
-@font-face {
-  font-family: 'myfont';
-  src: url('font.otf' );
-}
-  body{
-    background-color:rgba(100,214,180,1);
-    display:flex;
-    justify-content: center;
-    align-items: center;
-  }
-  
-   #container{
-     animation: moveUpDown 1s ease-in-out infinite alternate;
-     background-image: url("clock.png");
-     position:relative;
-     width: 75vw;
-     background-size: 100%;
-     border-radius: 25%;
-     height: 75vw;
-     margin: auto;
-     box-shadow: -5px 7px 15px 10px rgba(0,0,0,0.5);
-
-   }
-  #centre {
-     position: absolute;
-     top: 50%;
-     left: 50%;
-     width: 90%;
-     height: 90%;
-     transform: translate(-50%, -50%);
-     background-image: url("centre.png");
-     background-repeat: no-repeat;
-     background-size: cover;
-     z-index: 5;
-  }
-  #hour, #minute, #second{
-    position: relative;
-    border-radius: 10px;
-  }
-  #hour{
-    transform-origin: bottom;
-    z-index: 2;
-    height: 17%;
-    width: 4.5%;
-    color: black;
-    background-color: black;
-    top: 35%;
-    left: 47.1%;
-
-  }
-  #minute{
-    transform-origin: bottom;
-    z-index: 3;
-    height: 25%;
-    width: 4.5%;
-    color: black;
-    background-color: black;
-    top: 10%;
-    left: 47%;
-
-  }
-  #second{
-    transform-origin: 50% 81%;
-    z-index: 4;
-    height: 35%;
-    width: 1.4%;
-    color: red;
-    background-color: red;
-    top: -20%;
-    left: 48.7%;
-  }
-  #total{
-    height: 15vw;
-    width: 55vw;
-    background-color: rgba(43,43,43,1);
-    color: white;
-    border: solid black 5px;
-    display:flex;
-    justify-content: center;
-    border-radius: 8px;
-    font-size: 10vw;
-    position: absolute;
-    top: 58%;
-    left: 22%;
-    font-family: 'myfont';
-  }
-  
-</style>
+  <title>Clock</title>
+<link href="style.css" rel="stylesheet" type="text/css" />
 
 </head>
 
@@ -123,9 +26,10 @@
     
      
   </div>
-  <div id="total">
-
-  </div>
+  <div id="total"></div>
+  <div id="btncontainer">
+  <button id="swbtn" onclick="location.href='sw.html'">Stopwatch</button>
+</div>
 </body>
 <script src="script.js">
    
